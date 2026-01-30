@@ -1,0 +1,66 @@
+/* src/components/footer/Footer.css */
+
+.footer {
+  background-color: #1e3a8a; /* Dark blue */
+  color: #ffffff;
+  padding: 60px 20px 20px 20px;
+  font-family: sans-serif;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.footer__contacts h3,
+.footer__social h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+/* Fix link style */
+.footer__contacts a,
+.footer__social-links a {
+  margin-bottom: 10px;
+  color: #ffffff; /* White links */
+  text-decoration: none; /* Remove underline */
+  display: block;
+  transition: color 0.3s;
+}
+
+.footer__contacts a:hover,
+.footer__social-links a:hover {
+  color: #fbbf24; /* Gold on hover */
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+.footer__social-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer__social-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+}

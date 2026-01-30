@@ -1,0 +1,66 @@
+/* src/components/services/Services.css */
+
+.services {
+  padding: 80px 20px;
+  background-color: #f9fafb;
+}
+
+.services__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.services__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1e3a8a;
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.service-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #1e3a8a;
+}
+
+.service-card p {
+  font-size: 1rem;
+  margin-bottom: 24px;
+  color: #4b5563;
+}
+
+.service-card .btn {
+  text-decoration: none;
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .services__title {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    padding: 24px 16px;
+  }
+}

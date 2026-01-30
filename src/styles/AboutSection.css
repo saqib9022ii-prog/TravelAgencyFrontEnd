@@ -1,0 +1,83 @@
+/* src/components/aboutSection/AboutSection.css */
+
+.about-section {
+  padding: 80px 20px;
+  background-color: #f9fafb;
+  text-align: center;
+}
+
+.about-section__container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-section__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 30px;
+}
+
+.about-section__description {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.about-section .btn-whatsapp {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #25d366;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.about-section .btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-section__title {
+    font-size: 2rem;
+  }
+
+  .about-section__description {
+    font-size: 1rem;
+  }
+
+  .about-section .btn-whatsapp {
+    width: 100%;
+  }
+}
+/* Address styling */
+.about-section__address {
+  margin: 30px 0;
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
+.about-section__address h3 {
+  font-size: 1.3rem;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+}
+/* Map styling */
+.about-section__map {
+  margin-top: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Responsive map height */
+@media (max-width: 768px) {
+  .about-section__map iframe {
+    height: 250px;
+  }
+}

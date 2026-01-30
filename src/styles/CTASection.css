@@ -1,0 +1,91 @@
+/* src/components/ctaSection/CTASection.css */
+
+.cta-section {
+  padding: 80px 20px;
+  background-image: url("/cta-bg.jpg"); /* Optional: add background in public folder */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for readability */
+  z-index: 1;
+}
+
+.cta-section__container {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-section__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cta-section__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #f3f4f6;
+}
+
+.cta-section__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-cta {
+  padding: 16px 32px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+/* WhatsApp Button */
+.btn-whatsapp.btn-cta {
+  background-color: #25d366;
+}
+
+.btn-whatsapp.btn-cta:hover {
+  background-color: #1ebe5d;
+}
+
+/* Secondary Button */
+.btn-secondary.btn-cta {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+
+.btn-secondary.btn-cta:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cta-section__title {
+    font-size: 2rem;
+  }
+
+  .cta-section__subtitle {
+    font-size: 1rem;
+  }
+
+  .cta-section__buttons {
+    flex-direction: column;
+  }
+
+  .btn-cta {
+    width: 100%;
+  }
+}

@@ -1,0 +1,101 @@
+/* src/components/packagesTickets/PackagesTickets.css */
+
+.packages-tickets {
+  padding: 80px 20px;
+  background-color: #f9fafb;
+}
+
+.packages-tickets__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.packages-tickets__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #1e3a8a;
+}
+
+.packages-tickets__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.package-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: left;
+  display: flex;
+  flex-direction: column; /* ensures button stays inside card */
+  justify-content: space-between; /* pushes button to bottom if needed */
+}
+
+.package-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.package-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #1e3a8a;
+}
+
+.package-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.package-card li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #4b5563;
+}
+
+/* Fix button inside card */
+.package-card .btn {
+  display: block;
+  width: auto; /* fit content */
+  padding: 12px 20px;
+  text-align: center;
+  margin-top: auto; /* pushes button to bottom if card has space */
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #25d366; /* WhatsApp green */
+  transition: background-color 0.3s;
+}
+
+.package-card .btn:hover {
+  background-color: #1ebe5d;
+}
+
+.packages-tickets__note {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .packages-tickets__title {
+    font-size: 2rem;
+  }
+
+  .package-card {
+    padding: 20px 16px;
+  }
+
+  .package-card .btn {
+    width: 100%; /* buttons fill card width on mobile */
+  }
+}
