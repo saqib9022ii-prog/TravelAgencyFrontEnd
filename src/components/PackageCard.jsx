@@ -15,9 +15,9 @@ const PackageCard = ({ item, whatsappNumber }) => {
       {item.type === "Umrah" ? (
         <ul>
           <li><strong>Duration:</strong> {item.duration}</li>
-          <li><strong>Hotel Distance:</strong> {item.hotelDistance}</li>
+          <li><strong>Hotel Distance:</strong> {item.hotel_distance}</li>
           <li><strong>Transport:</strong> {item.transport}</li>
-          <li><strong>Estimated Price:</strong> {item.estimatedPrice}</li>
+          <li><strong>Estimated Price:</strong> {item.estimated_price}</li>
         </ul>
       ) : (
         <ul>

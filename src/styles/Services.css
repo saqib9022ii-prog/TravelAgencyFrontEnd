@@ -29,7 +29,12 @@
   border-radius: 12px;
   padding: 30px 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* Fix overflow */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .service-card:hover {
@@ -41,17 +46,38 @@
   font-size: 1.5rem;
   margin-bottom: 16px;
   color: #1e3a8a;
+  text-align: center;
 }
 
 .service-card p {
   font-size: 1rem;
   margin-bottom: 24px;
   color: #4b5563;
+  text-align: center;
 }
 
+/* Button styling */
 .service-card .btn {
+  display: inline-block;
+  width: 100%;
+  max-width: 220px;
+  padding: 12px 20px;
+  text-align: center;
+  box-sizing: border-box;
   text-decoration: none;
+  border-radius: 8px;
 
+  /* Example button colors */
+  background-color: #1e3a8a;
+  color: #ffffff;
+  font-weight: 600;
+
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.service-card .btn:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
 }
 
 /* Responsive adjustments */
@@ -62,5 +88,9 @@
 
   .service-card {
     padding: 24px 16px;
+  }
+
+  .service-card .btn {
+    max-width: 100%;
   }
 }

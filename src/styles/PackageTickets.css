@@ -30,10 +30,14 @@
   padding: 24px 20px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s, box-shadow 0.3s;
-  text-align: left;
+
   display: flex;
-  flex-direction: column; /* ensures button stays inside card */
-  justify-content: space-between; /* pushes button to bottom if needed */
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* prevent content overflow */
+  overflow: hidden;
+  min-height: 300px; /* ensures all cards have enough height for button */
 }
 
 .package-card:hover {
@@ -59,19 +63,22 @@
   color: #4b5563;
 }
 
-/* Fix button inside card */
+/* Buttons inside cards */
 .package-card .btn {
   display: block;
-  width: auto; /* fit content */
-  padding: 12px 20px;
+  width: 100%;        /* button fills card width */
+  max-width: 100%;    /* ensure it doesn’t overflow */
+  padding: 10px;      /* reduce padding a bit */
   text-align: center;
-  margin-top: auto; /* pushes button to bottom if card has space */
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
   color: #ffffff;
   background-color: #25d366; /* WhatsApp green */
   transition: background-color 0.3s;
+  margin-top: auto;   /* pushes button to bottom */
+  box-sizing: border-box; /* include padding in width */
+  word-break: break-word; /* prevent text overflow */
 }
 
 .package-card .btn:hover {
@@ -85,7 +92,13 @@
   text-align: center;
 }
 
-/* Responsive adjustments */
+/* ================= Responsive Adjustments ================= */
+@media (max-width: 1024px) {
+  .packages-tickets__title {
+    font-size: 2.2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .packages-tickets__title {
     font-size: 2rem;
@@ -96,6 +109,23 @@
   }
 
   .package-card .btn {
-    width: 100%; /* buttons fill card width on mobile */
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .packages-tickets__title {
+    font-size: 1.8rem;
+  }
+
+  .package-card {
+    padding: 16px 12px;
+  }
+
+  .package-card .btn {
+    font-size: 0.9rem;
+    padding: 8px;
   }
 }

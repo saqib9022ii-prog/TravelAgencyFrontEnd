@@ -21,10 +21,10 @@ const ContactForm = () => {
 
     // Construct WhatsApp message
     const message = `Assalamualaikum, I am contacting you via website:\n
-Name: ${formData.name}\n
-Email: ${formData.email}\n
-Subject: ${formData.subject}\n
-Message: ${formData.message}`;
+    Name: ${formData.name}\n
+    Email: ${formData.email}\n
+    Subject: ${formData.subject}\n
+    Message: ${formData.message}`;
 
     // Open WhatsApp link
     const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(

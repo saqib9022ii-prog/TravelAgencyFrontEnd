@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Visa.css";
-import axios from "axios";
+import api from "../api/axios";
 
 const Visa = () => {
   const [visaData, setVisaData] = useState([]);
 
-  useEffect(() => {
-    axios.get("http://localhost:5000/api/visa")
-      .then(res => setVisaData(res.data));
-  }, []);
+ useEffect(() => {
+  const fetchVisa = async () => {
+    try {
+      const res = await api.get("/api/visa");
+      setVisaData(res.data);
+    } catch (err) {
+      console.error("Failed to fetch visa data:", err);
+    }
+  };
+
+  fetchVisa();
+}, []);
+
 
   return (
     <section className="visa-page">
@@ -19,7 +28,7 @@ const Visa = () => {
           {visaData.map((visa) => (
             <div className="visa-card" key={visa.id}>
               <img
-                src={`http://localhost:5000${visa.image}`}
+                src={`https://express-6zp8.vercel.app${visa.image}`}
                 alt={visa.type}
                 className="visa-card__image"
               />

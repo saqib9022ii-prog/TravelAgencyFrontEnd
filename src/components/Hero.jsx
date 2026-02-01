@@ -2,7 +2,7 @@
 import "../styles/Hero.css";
 
 const Hero = () => {
-  const whatsappNumber = "923001234567"; // replace with real number
+  const whatsappNumber = "92330642100"; // replace with real number
   const whatsappMessage =
     "Assalamualaikum, I would like to get information about Umrah packages and ticket estimates.";
 
@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="hero__overlay">
         <div className="hero__content">
           <h1 className="hero__title">
-            Umrah Packages & Work Visa Ticket Estimates
+            Umrah Packages & Work Visa Ticket 
           </h1>
 
           <p className="hero__subtitle">
