@@ -19,7 +19,7 @@ const Hero = () => {
           </h1>
 
           <p className="hero__subtitle">
-            Trusted & Affordable Umrah, work visa and air ticket services with transparent
+            Trusted & Affordable Umrah, work visa, and air ticket services with transport
              pricing. Contact us for latest rates and complete guidance.
           </p>
 
