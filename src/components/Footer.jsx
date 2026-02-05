@@ -19,10 +19,9 @@ const Footer = () => {
         <div className="footer__social">
           <h3>Follow Us</h3>
           <div className="footer__social-links">
-            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><FaFacebookF/> /Facebook</a>
+            <a href="https://www.facebook.com/groups/420500097053468" rel="noopener noreferrer"><FaFacebookF/> /Facebook</a>
             <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram/> /Instagram</a>
-            <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><FaTwitter/> /Twitter</a>
-            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube/> /YouTube</a>
+            
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import api from "../api/axios";
 import "../styles/PackageTickets.css";
 import PackageCard from "./PackageCard";
@@ -13,10 +13,30 @@ const PackagesTickets = () => {
         const packagesRes = await api.get("/api/packages");
         const ticketsRes = await api.get("/api/tickets");
 
-        // Combine packages & tickets
+        // Normalize packages
+        const normalizedPackages = packagesRes.data.map((p) => ({
+          id: p.id,
+          title: p.name,
+          duration: p.duration,
+          hotel_distance: p.hotel_distance,
+          transport: p.transport,
+          price: p.estimated_price,
+          type: "package",
+        }));
+
+        // Normalize tickets
+        const normalizedTickets = ticketsRes.data.map((t) => ({
+          id: t.id,
+          title: t.name,
+          route: t.from_location,
+          price: t.price_range,
+          season: t.season,
+          type: "ticket",
+        }));
+
         setPackagesTicketsData([
-          ...packagesRes.data,
-          ...ticketsRes.data,
+          ...normalizedPackages,
+          ...normalizedTickets,
         ]);
       } catch (err) {
         console.error("Failed to fetch packages/tickets:", err);
@@ -33,10 +53,10 @@ const PackagesTickets = () => {
           Umrah Packages & Ticket Estimates
         </h2>
 
-        <div className="packages-tickets__grid">
-          {packagesTicketsData.map((item, index) => (
+       <div className="packages-tickets__grid">
+          {packagesTicketsData.map((item) => (
             <PackageCard
-              key={`${item._id || item.id}-${index}`}
+              key={`${item.type}-${item.id}`}
               item={item}
               whatsappNumber={whatsappNumber}
             />

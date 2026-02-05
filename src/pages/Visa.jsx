@@ -5,19 +5,18 @@ import api from "../api/axios";
 const Visa = () => {
   const [visaData, setVisaData] = useState([]);
 
- useEffect(() => {
-  const fetchVisa = async () => {
-    try {
-      const res = await api.get("/api/visa");
-      setVisaData(res.data);
-    } catch (err) {
-      console.error("Failed to fetch visa data:", err);
-    }
-  };
+  useEffect(() => {
+    const fetchVisa = async () => {
+      try {
+        const res = await api.get("/api/visa");
+        setVisaData(res.data);
+      } catch (err) {
+        console.error("Failed to fetch visa data:", err);
+      }
+    };
 
-  fetchVisa();
-}, []);
-
+    fetchVisa();
+  }, []);
 
   return (
     <section className="visa-page">
@@ -27,11 +26,14 @@ const Visa = () => {
         <div className="visa-grid">
           {visaData.map((visa) => (
             <div className="visa-card" key={visa.id}>
-              <img
-                src={`https://express-6zp8.vercel.app${visa.image}`}
-                alt={visa.type}
-                className="visa-card__image"
-              />
+              
+              {visa.image_url && (
+                <img
+                  src={visa.image_url}
+                  alt={visa.type}
+                  className="visa-card__image"
+                />
+              )}
 
               <h3>{visa.type} - {visa.country}</h3>
               <p><strong>Duration:</strong> {visa.duration}</p>

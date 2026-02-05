@@ -2,30 +2,65 @@
 import "../styles/PackageCard.css";
 
 const PackageCard = ({ item, whatsappNumber }) => {
+  // WhatsApp link text based on item type
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    item.type === "Umrah"
-      ? `Assalamualaikum, I am interested in the ${item.name}. Please provide details.`
-      : `Assalamualaikum, I want details for ${item.name} from ${item.from}.`
+    item.type === "package"
+      ? `Assalamualaikum, I am interested in the package "${item.title}". Please provide details.`
+      : `Assalamualaikum, I am interested in the ticket "${item.title}" from ${item.route}. Please provide details.`
   )}`;
 
   return (
     <div className="package-card">
-      <h3>{item.name}</h3>
+      <h3>{item.title}</h3>
 
-      {item.type === "Umrah" ? (
-        <ul>
-          <li><strong>Duration:</strong> {item.duration}</li>
-          <li><strong>Hotel Distance:</strong> {item.hotel_distance}</li>
-          <li><strong>Transport:</strong> {item.transport}</li>
-          <li><strong>Estimated Price:</strong> {item.estimated_price}</li>
-        </ul>
-      ) : (
-        <ul>
-          <li><strong>Route:</strong> {item.from}</li>
-          <li><strong>Estimated Price:</strong> {item.priceRange}</li>
-          <li><strong>Season:</strong> {item.season}</li>
-        </ul>
-      )}
+      <ul>
+        {/* For packages */}
+        {item.type === "package" && (
+          <>
+            {item.duration && (
+              <li>
+                <strong>Duration:</strong> {item.duration}
+              </li>
+            )}
+            {item.hotel_distance && (
+              <li>
+                <strong>Hotel Distance:</strong> {item.hotel_distance}
+              </li>
+            )}
+            {item.transport && (
+              <li>
+                <strong>Transport:</strong> {item.transport}
+              </li>
+            )}
+            {item.price && (
+              <li>
+                <strong>Estimated Price:</strong> {item.price}
+              </li>
+            )}
+          </>
+        )}
+
+        {/* For tickets */}
+        {item.type === "ticket" && (
+          <>
+            {item.route && (
+              <li>
+                <strong>Route:</strong> {item.route}
+              </li>
+            )}
+            {item.price && (
+              <li>
+                <strong>Price Range:</strong> {item.price}
+              </li>
+            )}
+            {item.season && (
+              <li>
+                <strong>Season:</strong> {item.season}
+              </li>
+            )}
+          </>
+        )}
+      </ul>
 
       <a
         href={whatsappLink}
@@ -36,7 +71,6 @@ const PackageCard = ({ item, whatsappNumber }) => {
         Contact via WhatsApp
       </a>
     </div>
-    
   );
 };
 

@@ -10,9 +10,9 @@ const servicesData = [
     ctaLink: "/umrah-packages",
   },
   {
-    title: "Air Ticket Estimates",
+    title: "Air Ticket Prices",
     description:
-      "Estimated airfare for Umrah, Work, and Visit visas. Contact us for latest rates.",
+      "We provide services for Umrah, Work, and Visit visas. Contact us for latest rates.",
     ctaText: "WhatsApp for Rates",
     ctaLink: "https://wa.me/923330642100?text=I'm%20interested%20in%20ticket%20estimates",
     isWhatsapp: true,
@@ -20,7 +20,7 @@ const servicesData = [
   {
     title: "Work Visa Assistance",
     description:
-      "Guidance on work visas, required documents, and ticket estimates for various countries.",
+      "Guidance on work visas, required documents, and ticket prices for various countries.",
     ctaText: "Contact for Assistance",
     ctaLink: "https://wa.me/923330642100?text=I%20need%20work%20visa%20assistance",
     isWhatsapp: true,

@@ -67,8 +67,8 @@
 
 .visa-card__image {
   width: 100%;          /* fill the container horizontally */
-  height: auto;          /* maintain aspect ratio */
-  max-height: 200px;     /* limit vertical height */
+  height: 180px;          /* maintain aspect ratio */
+  object-fit: contain;   /* limit vertical height */
   display: block;
   margin: 0 auto;
 

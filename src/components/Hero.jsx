@@ -15,12 +15,12 @@ const Hero = () => {
       <div className="hero__overlay">
         <div className="hero__content">
           <h1 className="hero__title">
-            Umrah Packages & Work Visa Ticket 
+            Umrah Packages & Work Visa & International Air Tickets 
           </h1>
 
           <p className="hero__subtitle">
-            Trusted Umrah, work visa and air ticket services with transparent
-            estimated pricing. Contact us for latest rates and complete guidance.
+            Trusted & Affordable Umrah, work visa and air ticket services with transparent
+             pricing. Contact us for latest rates and complete guidance.
           </p>
 
           <div className="hero__actions">
@@ -35,8 +35,8 @@ const Hero = () => {
             </a>
 
             {/* Secondary CTA */}
-            <a href="/umrah-packages" className="btn btn-secondary">
-              View Umrah Packages
+            <a href="/visa" className="btn btn-secondary">
+              View Available Visa Options
             </a>
           </div>
 
