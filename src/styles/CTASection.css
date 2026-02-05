@@ -1,7 +1,7 @@
 /* src/components/ctaSection/CTASection.css */
 
 .cta-section {
-  padding: 80px 20px;
+  padding: 80px var(--page-padding);
   background-image: url("/cta-bg.jpg"); /* Optional: add background in public folder */
   background-size: cover;
   background-position: center;

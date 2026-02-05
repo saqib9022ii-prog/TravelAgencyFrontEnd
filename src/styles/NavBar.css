@@ -13,10 +13,10 @@
 }
 
 .navbar__container {
-  max-width: 1200px;
+  max-width: var(--page-max-width);
   margin: 0 auto;
-  padding: 0 20px;
-  height: 70px;
+  padding: 0 var(--page-padding);
+  height: var(--nav-height);
 
   display: flex;
   align-items: center;
@@ -84,7 +84,7 @@
 @media (max-width: 768px) {
 
   .navbar__container {
-    height: 70px;
+    height: var(--nav-height);
   }
 
   /* show hamburger */
@@ -95,7 +95,7 @@
   /* hide links by default */
   .navbar__links {
     position: absolute;
-    top: 70px;
+    top: var(--nav-height);
     left: 0;
     width: 100%;
     background: #ffffff;

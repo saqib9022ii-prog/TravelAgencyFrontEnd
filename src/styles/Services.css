@@ -1,12 +1,12 @@
 /* src/components/services/Services.css */
 
 .services {
-  padding: 80px 20px;
+  padding: 80px var(--page-padding);
   background-color: #f9fafb;
 }
 
 .services__container {
-  max-width: 1200px;
+  max-width: var(--page-max-width);
   margin: 0 auto;
   text-align: center;
 }

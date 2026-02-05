@@ -1,12 +1,12 @@
 /* src/components/packagesTickets/PackagesTickets.css */
 
 .packages-tickets {
-  padding: 80px 20px;
+  padding: 80px var(--page-padding);
   background-color: #f9fafb;
 }
 
 .packages-tickets__container {
-  max-width: 1200px;
+  max-width: var(--page-max-width);
   margin: 0 auto;
   text-align: center;
 }
