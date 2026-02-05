@@ -90,3 +90,18 @@
     justify-content: center;
   }
 }
+
+/* Desktop: keep Follow Us links on the right (do not affect mobile) */
+@media (min-width: 769px) {
+  .footer__social {
+    text-align: right;
+  }
+
+  .footer__social-links {
+    align-items: flex-end;
+  }
+
+  .footer__social-links a {
+    justify-content: flex-end;
+  }
+}
