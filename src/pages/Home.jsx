@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <>
      <Helmet>
-        <title>Umrah & Work Visa Travel Agency | Home</title>
+        <title>PAK SAMBRIAL TRAVELS</title>
         <meta
           name="description"
           content="Your trusted travel agency offering Umrah packages, ticket estimates, and work visa guidance. Contact us for details via WhatsApp."
