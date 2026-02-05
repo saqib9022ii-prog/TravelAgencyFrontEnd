@@ -7,7 +7,7 @@ const servicesData = [
     description:
       "Economy, Standard, and VIP packages with hotel, transport, and estimated pricing.",
     ctaText: "View Packages",
-    ctaLink: "/umrah-packages",
+    ctaLink: "/",
   },
   {
     title: "Air Ticket Prices",
