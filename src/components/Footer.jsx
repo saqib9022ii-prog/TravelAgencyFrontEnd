@@ -1,6 +1,6 @@
 // src/components/footer/Footer.jsx
 import "../styles/Footer.css";
-import { FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp, FaYoutube} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTwitter, FaWhatsapp, FaGlobe} from "react-icons/fa";
 import {SiGmail} from "react-icons/si";
 
 const Footer = () => {
@@ -20,7 +20,7 @@ const Footer = () => {
           <h3>Follow Us</h3>
           <div className="footer__social-links">
             <a href="https://www.facebook.com/groups/420500097053468" rel="noopener noreferrer"><FaFacebookF/> /Facebook</a>
-            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><FaInstagram/> /Instagram</a>
+            <a href="https://actgroups.pk/" target="_blank" rel="noopener noreferrer"><FaGlobe/> /actgroups</a>
             
           </div>
         </div>
