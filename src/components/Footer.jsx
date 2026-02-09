@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
 
         <div className="footer__social">
-          <h3>Follow Us</h3>
+          <h3>Links</h3>
           <div className="footer__social-links">
             <a
               href="https://www.facebook.com/groups/420500097053468"
