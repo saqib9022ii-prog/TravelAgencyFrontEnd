@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/Visa.css";
 import api from "../api/axios";
+import Seo from "../seo/Seo";
 
 const Visa = () => {
   const [visaData, setVisaData] = useState([]);
@@ -19,40 +20,57 @@ const Visa = () => {
   }, []);
 
   return (
-    <section className="visa-page">
-      <div className="visa-container">
-        <h2>Available Visa Options</h2>
+    <>
+      <Seo
+        title="Visa Options"
+        description="Explore available visa options and contact Pak Sambrial Travels via WhatsApp for pricing and guidance."
+        keywords="visa, work visa, tourist visa, travel agency, pakistan, sambrial"
+        path="/visa"
+        image="/assets/uae_tourist_visa.jpg"
+      />
 
-        <div className="visa-grid">
-          {visaData.map((visa) => (
-            <div className="visa-card" key={visa.id}>
-              
-              {visa.image_url && (
-                <img
-                  src={visa.image_url}
-                  alt={visa.type}
-                  className="visa-card__image"
-                />
-              )}
+      <section className="visa-page">
+        <div className="visa-container">
+          <h1>Available Visa Options</h1>
 
-              <h3>{visa.type} - {visa.country}</h3>
-              <p><strong>Duration:</strong> {visa.duration}</p>
-              <p><strong>Price:</strong> {visa.price}</p>
-              <p>{visa.description}</p>
+          <div className="visa-grid">
+            {visaData.map((visa) => (
+              <div className="visa-card" key={visa.id}>
+                {visa.image_url && (
+                  <img
+                    src={visa.image_url}
+                    alt={`${visa.type} visa for ${visa.country}`}
+                    className="visa-card__image"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                )}
 
-              <a
-                href={`https://wa.me/923330642100?text=I'm interested in ${visa.type} (${visa.country})`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-whatsapp"
-              >
-                Contact via WhatsApp
-              </a>
-            </div>
-          ))}
+                <h3>
+                  {visa.type} - {visa.country}
+                </h3>
+                <p>
+                  <strong>Duration:</strong> {visa.duration}
+                </p>
+                <p>
+                  <strong>Price:</strong> {visa.price}
+                </p>
+                <p>{visa.description}</p>
+
+                <a
+                  href={`https://wa.me/923330642100?text=I'm interested in ${visa.type} (${visa.country})`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-whatsapp"
+                >
+                  Contact via WhatsApp
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

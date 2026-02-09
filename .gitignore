@@ -99,3 +99,5 @@ vite.config.ts.timestamp-*
 
 # VSCode testing
 .vscode-test
+.vercel
+.env*.local

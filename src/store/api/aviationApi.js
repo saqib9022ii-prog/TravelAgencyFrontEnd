@@ -8,10 +8,10 @@ export const aviationApi = createApi({
     }),
     endpoints: (build) => ({
         getFlights: build.query({
-            query: ({ flight_status = "active"}) => `flights?access_key=${API_KEY}`,
+            query: () => `flights?access_key=${API_KEY}`,
         }),
         getAirports: build.query({
-            query: ({iata}) => `airports?access_key=${API_KEY}`,
+            query: () => `airports?access_key=${API_KEY}`,
         })
     }),
 });

@@ -7,6 +7,30 @@
   font-family: sans-serif;
 }
 
+.footer__brand {
+  max-width: var(--page-max-width);
+  margin: 0 auto 32px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__brand-link {
+  display: inline-flex;
+  text-decoration: none;
+}
+
+.footer__brand-link:focus-visible {
+  outline: 2px solid #fbbf24;
+  outline-offset: 4px;
+  border-radius: 12px;
+}
+
+.footer__logo {
+  width: min(120px, 70vw);
+  height: auto;
+  display: block;
+}
+
 .footer__container {
   display: flex;
   justify-content: space-between;

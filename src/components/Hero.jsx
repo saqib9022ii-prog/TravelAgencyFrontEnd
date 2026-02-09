@@ -1,5 +1,6 @@
 // src/components/hero/Hero.jsx
 import "../styles/Hero.css";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const whatsappNumber = "92330642100"; // replace with real number
@@ -35,9 +36,9 @@ const Hero = () => {
             </a>
 
             {/* Secondary CTA */}
-            <a href="/visa" className="btn btn-secondary">
+            <Link to="/visa" className="btn btn-secondary">
               View Available Visa Options
-            </a>
+            </Link>
           </div>
 
           <p className="hero__note">

@@ -26,4 +26,14 @@ export default defineConfig([
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },
+  {
+    files: [
+      '**/*.config.{js,mjs,cjs}',
+      'playwright.config.js',
+      'scripts/**/*.{js,mjs,cjs}',
+    ],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
 ])

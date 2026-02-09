@@ -1,4 +1,5 @@
 // src/components/ctaSection/CTASection.jsx
+import { Link } from "react-router-dom";
 import "../styles/CTASection.css";
 
 const CTASection = () => {
@@ -13,12 +14,11 @@ const CTASection = () => {
   return (
     <section className="cta-section">
       <div className="cta-section__container">
-        <h2 className="cta-section__title">
-          Ready to Plan Your Trip?
-        </h2>
+        <h2 className="cta-section__title">Ready to Plan Your Trip?</h2>
         <p className="cta-section__subtitle">
-          Get in touch with us for the latest Umrah packages, work visa tickets, and guidance. 
-          We’ll provide estimates and help you plan every step of your journey.
+          Get in touch with us for the latest Umrah packages, work visa tickets,
+          and guidance. We'll provide estimates and help you plan every step of
+          your journey.
         </p>
         <div className="cta-section__buttons">
           <a
@@ -29,9 +29,9 @@ const CTASection = () => {
           >
             Contact via WhatsApp
           </a>
-          <a href="/contact" className="btn btn-secondary btn-cta">
+          <Link to="/contact" className="btn btn-secondary btn-cta">
             Contact Form
-          </a>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 
 export const useFadeInOnScroll = (threshold = 0.1) => {
-  const ref = useRef();
+  const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -12,10 +12,11 @@ export const useFadeInOnScroll = (threshold = 0.1) => {
       { threshold }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    const node = ref.current;
+    if (node) observer.observe(node);
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (node) observer.unobserve(node);
     };
   }, [threshold]);
 
